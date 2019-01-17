@@ -6,7 +6,7 @@ export default class RouteMap extends Component {
       const {routes}=this.props
       //console.log(routes)
       const defaultRoute=<Route  path='/' component={()=>{
-        return <Redirect  to='/music/recommend'></Redirect>
+        return <Redirect  to='/home'></Redirect>
     }} key={111} exact />
     return (
       <Switch>

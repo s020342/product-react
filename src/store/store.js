@@ -1,15 +1,17 @@
 import {createStore} from 'redux'
 
 const defaultState={
-   
+   list:[],
+   arr:[]
 }
 
 const reducer=(state=defaultState,action)=>{
     const {type,payload}=action;
     switch(type){
-        case 'UPDATE':
-        console.log({...state,...payload})
-        return {...state,...payload}
+        case 'UPDATA':
+        return {...state,list:[...payload]}
+        case 'ADD':
+        return {...state,arr:[...payload]}
         default :
         return state
     }
